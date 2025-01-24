@@ -28,9 +28,9 @@ def order_payment(request):
             request,
             "index.html",
             {
-                "callback_url":
-                "razorpay_key":settings.RAZORPAY_KEY_ID,
-                "order":order,
+                "callback_url": "http://" + "127.0.0.1:8000" + "razorpay/callback", #which url?.................................
+                "razorpay_key": settings.RAZORPAY_KEY_ID,
+                "order": order,
             },
         )
     return render(request,"index.html")
